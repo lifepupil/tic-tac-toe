@@ -13,7 +13,7 @@ function init(){
 }
 
 var wint = '';
-var c;
+// var c;
 
 function selecting() {
   var color = $('.active').css('background-color');
@@ -22,12 +22,13 @@ function selecting() {
   // do test of win conditions before active is toggled
   // winTest();
 
-  for (var col = 1; col<4 ; col++) {
-    c = $('tr td:nth-child(col)');
+  for (var col = 1 ; col<4 ; col++) {
+    var c = $('tr td:nth-child(' + col + ')');
+
     if (c[0].style.background === c[1].style.background && c[0].style.background === c[2].style.background && c[1].style.background === c[2].style.background) {
-      // alert('YOU WIN');
+      alert('YOU WIN');
       // break;
-      wint = "YES";
+      // wint = 'YES';
     }
   }
 
